@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>BeepWeep Ventures</title>
     <meta name="description" content="BeepWeep Ventures backs bold founders with capital, craft, and community." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+SC:wght@400;500&family=Noto+Sans+Devanagari:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/editor-note" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <div class="container">
-        <div class="branding">
-          <span class="logo">BeepWeep Ventures</span>
-        </div>
-        <nav class="site-nav">
-          <a href="#playbook">Playbook</a>
-          <a href="#careers">Join the Team</a>
-        </nav>
+      <div class="container header-shell">
+        <a class="brand-mark" href="#top">
+          BeepWeep<span class="brand-dot" aria-hidden="true">•</span>Ventures
+        </a>
+        <span class="header-greeting">
+          <span class="greet" data-label="Hello in English">hello</span>,
+          <span class="greet" data-label="Hello in Hindi">नमस्ते</span>,
+          <span class="greet" data-label="Hello in Japanese">こんにちは</span>,
+          <span class="greet" data-label="Hello in Chinese">你好</span>
+        </span>
       </div>
     </header>
 
@@ -24,7 +32,6 @@
       <section class="hero" id="top">
         <div class="container hero-content">
           <div class="hero-copy">
-            <p class="eyebrow">BeepWeep Ventures</p>
             <h1>
               A haven for the <span>10x builders</span>, the thinkers, the quiet architects of wealth.
             </h1>
@@ -33,71 +40,18 @@
               This is where status takes a back seat to substance. Where clarity leads, and wealth follows.
             </p>
           </div>
-          <div class="hero-footnotes">
-            <div class="footnote">
-              <span class="label">What we cultivate</span>
-              <span class="value">Discipline · Depth · Durable value</span>
-            </div>
-            <div class="footnote">
-              <span class="label">How we partner</span>
-              <span class="value">Quiet conviction, designed for compounding</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section manifesto" id="playbook">
-        <div class="container columns">
-          <div class="section-copy narrow">
-            <h2>The Playbook</h2>
-            <p>
-              Fewer meetings, more making. We integrate capital with craft so founders stay in motion and in control of their narrative.
-            </p>
-          </div>
-          <ul class="list-check">
-            <li>Signal-weighted diligence that respects the operator’s time</li>
-            <li>Clarity sprints that turn complex product bets into crisp roadmaps</li>
-            <li>Operator guild spanning product, growth, finance, and brand</li>
-            <li>Founder forums designed for candor, not theater</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section focus" id="portfolio">
-        <div class="container">
-          <h2>Focus Areas</h2>
-          <div class="grid minimal">
-            <article class="tile">
-              <h3>Systems</h3>
-              <p>Infrastructure, developer tools, and automation layers built for resilience and scale.</p>
-            </article>
-            <article class="tile">
-              <h3>Human Advantage</h3>
-              <p>Intelligent interfaces, applied AI, and products that compound human creativity.</p>
-            </article>
-            <article class="tile">
-              <h3>Capital Markets</h3>
-              <p>New rails for commerce, risk, and liquidity that unlock long-term wealth creation.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section join" id="careers">
-        <div class="container columns">
-          <div class="section-copy narrow">
-            <h2>Join the Team</h2>
-            <p>
-              We look for patient builders with sharp instincts and a bias for quiet execution. Bring your craft and your compass.
-            </p>
-          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <p>&copy; 2015 - 2025 BeepWeep Ventures | All rights reserved.</p>
+    <footer class="site-footer" id="contact">
+      <div class="container footer-bottom-grid">
+        <p class="footer-legal">
+          <span class="legal-year">&copy; 2015 – 2025</span>
+          <span class="legal-divider">|</span>
+          <span class="legal-entity"><strong>BeepWeep Ventures</strong></span>
+          <span class="legal-rights">All rights reserved.</span>
+        </p>
         <nav class="footer-links">
           <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
           <a href="#" aria-label="Terms of Use">Terms of Use</a>
@@ -109,5 +63,23 @@
         </nav>
       </div>
     </footer>
+    <script>
+      (function () {
+        const setPointerVars = (x, y) => {
+          document.documentElement.style.setProperty('--pointer-x', `${x}px`);
+          document.documentElement.style.setProperty('--pointer-y', `${y}px`);
+        };
+
+        setPointerVars(0, 0);
+
+        window.addEventListener('pointermove', (event) => {
+          const x = event.clientX - window.innerWidth / 2;
+          const y = event.clientY - window.innerHeight / 2;
+          setPointerVars(x, y);
+        });
+
+        window.addEventListener('mouseleave', () => setPointerVars(0, 0));
+      })();
+    </script>
   </body>
 </html>
