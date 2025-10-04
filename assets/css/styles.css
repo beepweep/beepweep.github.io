@@ -1,7 +1,7 @@
 :root {
-  --font-body: "Editor Note", "Helvetica Neue", Arial, sans-serif;
-  --font-display: "Editor Note", "Helvetica Neue", Arial, sans-serif;
-  --font-greeting: "Noto Sans", "Editor Note", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-greeting: "Inter", "Noto Sans", sans-serif;
   --color-bg: #f7f8fb;
   --color-surface: #ffffff;
   --color-text: #12141d;
@@ -10,8 +10,6 @@
   --color-border: rgba(18, 20, 29, 0.08);
   --color-border-strong: rgba(18, 20, 29, 0.14);
   --max-width: 960px;
-  --pointer-x: 0px;
-  --pointer-y: 0px;
 }
 
 .sr-only {
@@ -37,25 +35,62 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -20% -15% -15% -15%;
+  pointer-events: none;
+  z-index: -1;
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  inset: -25% -20% auto -20%;
-  height: 120vh;
   background:
-    radial-gradient(55% 55% at 50% 30%, rgba(31, 58, 245, 0.28), transparent 70%),
-    radial-gradient(45% 45% at 60% 10%, rgba(118, 143, 255, 0.2), transparent 65%),
-    radial-gradient(40% 40% at 40% 75%, rgba(24, 197, 255, 0.18), transparent 80%),
-    repeating-linear-gradient(115deg, rgba(31, 58, 245, 0.04) 0%, rgba(31, 58, 245, 0.04) 12px, transparent 12px, transparent 26px);
-  opacity: 0.9;
-  pointer-events: none;
-  z-index: -1;
-  transform: translate3d(calc(var(--pointer-x) * 0.04), calc(var(--pointer-y) * 0.04), 0);
-  transition: transform 0.6s ease;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.05) 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.05) 80%, transparent 100%);
+    radial-gradient(50% 50% at 20% 20%, rgba(60, 70, 255, 0.4), transparent 68%),
+    radial-gradient(60% 60% at 80% 25%, rgba(103, 220, 255, 0.32), transparent 70%),
+    radial-gradient(55% 55% at 55% 85%, rgba(170, 135, 255, 0.25), transparent 78%);
+  background-size: 140% 140%;
+  animation: gradientFloat 22s ease-in-out infinite;
+  opacity: 0.85;
+}
+
+body::after {
+  background: repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.0) 0 18px, rgba(60, 70, 255, 0.12) 18px 36px);
+  background-size: 160% 160%;
+  animation: ribbonSweep 12s linear infinite;
+  mix-blend-mode: screen;
+  opacity: 0.45;
+}
+
+@keyframes gradientFloat {
+  0% {
+    transform: translate3d(-5%, -4%, 0) scale(1.02);
+    background-position: 0% 50%;
+  }
+  50% {
+    transform: translate3d(4%, 5%, 0) scale(1.07);
+    background-position: 45% 60%;
+  }
+  100% {
+    transform: translate3d(-5%, -4%, 0) scale(1.02);
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes ribbonSweep {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 a {
