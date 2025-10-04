@@ -56,7 +56,7 @@ a:hover {
 }
 
 .container {
-  width: min(88%, var(--max-width));
+  width: min(94%, 1200px);
   margin: 0 auto;
 }
 
@@ -150,14 +150,15 @@ a:hover {
 }
 
 .hero-copy {
-  max-width: 560px;
+  max-width: 720px;
 }
 
 .hero-copy h1 {
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 5vw, 3.5rem);
-  letter-spacing: -0.016em;
-  margin: 0 0 1.05rem;
+  letter-spacing: -0.012em;
+  line-height: 1.08;
+  margin: 0 0 0.8rem;
   font-weight: 600;
 }
 
