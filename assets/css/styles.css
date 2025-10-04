@@ -12,6 +12,10 @@
   --max-width: 960px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -37,6 +41,15 @@ body {
   -webkit-font-smoothing: antialiased;
   position: relative;
   overflow-x: hidden;
+}
+
+main {
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 88px;
+}
+
+main > section {
+  scroll-snap-align: start;
 }
 
 body::before,
@@ -90,6 +103,17 @@ body::after {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -201,6 +225,10 @@ a:hover {
 
 .hero {
   padding: clamp(3.5rem, 9vw, 5.75rem) 0;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
@@ -209,6 +237,9 @@ a:hover {
   align-items: center;
   gap: clamp(1.75rem, 5vw, 3rem);
   text-align: center;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: heroFadeUp 0.9s cubic-bezier(0.25, 0.35, 0.3, 1.1) 0.15s forwards;
 }
 
 .hero-copy {
@@ -241,6 +272,9 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: heroFadeUp 0.9s cubic-bezier(0.25, 0.35, 0.3, 1.1) 0.35s forwards;
 }
 
  .hero-button {
@@ -316,14 +350,76 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
-.hero-button--outline span {
-  color: #ffffff;
+.privacy-hero {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  text-align: center;
 }
 
-.ecosystems {
-  padding: clamp(3.5rem, 8vw, 5.5rem) 0;
-  background: transparent;
-  border-top: 1px solid rgba(18, 20, 29, 0.05);
+.privacy-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--color-text);
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.privacy-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.privacy-content {
+  padding: 0 0 clamp(4rem, 8vw, 6rem);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-text {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.privacy-text h2 {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+}
+
+.privacy-text h3 {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 1.5rem 0 0.75rem;
+  font-weight: 600;
+}
+
+.privacy-text p {
+  margin: 0 0 1.5rem;
+}
+
+.privacy-text ul,
+.privacy-text ol {
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.privacy-text li {
+  margin-bottom: 0.5rem;
+}
+
+.privacy-text a {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.privacy-text a:hover,
+.privacy-text a:focus-visible {
+  border-bottom-color: var(--color-primary);
 }
 
 .cookie-banner {
