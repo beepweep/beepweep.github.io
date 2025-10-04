@@ -217,7 +217,7 @@ a:hover {
 
 .hero-copy h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-size: clamp(2.8rem, 6vw, 4rem);
   letter-spacing: -0.012em;
   line-height: 1.08;
   margin: 0 0 0.8rem;
@@ -235,9 +235,94 @@ a:hover {
   line-height: 1.55;
 }
 
- .ecosystems {
-  background: #f0f4ff;
+.hero-actions {
+  margin-top: 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+ .hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0.75rem 2.1rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.18);
+  color: #101322;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  white-space: nowrap;
+  user-select: none;
+  outline: none;
+  transform: translateY(0);
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 8px 20px rgba(16, 19, 34, 0.12);
+}
+
+.hero-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.12));
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.hero-button::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.hero-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(16, 19, 34, 0.16);
+}
+
+.hero-button--outline {
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: linear-gradient(135deg, rgba(61, 75, 255, 0.6), rgba(31, 53, 255, 0.95), rgba(111, 91, 255, 0.85));
+  color: #ffffff;
+  box-shadow: 0 14px 32px rgba(31, 53, 255, 0.24);
+}
+
+.hero-button--outline::before {
+  opacity: 0.8;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.08));
+}
+
+.hero-button--outline::after {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.hero-button--outline span {
+  color: #ffffff;
+}
+
+.ecosystems {
   padding: clamp(3.5rem, 8vw, 5.5rem) 0;
+  background: transparent;
   border-top: 1px solid rgba(18, 20, 29, 0.05);
 }
 
@@ -264,31 +349,39 @@ a:hover {
 
 .ecosystems-grid {
   display: grid;
-  gap: clamp(1.5rem, 4vw, 2.5rem);
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1.25rem, 3.5vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .ecosystem-pill {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.4rem;
-  border-radius: 16px;
-  background: #ffffff;
-  box-shadow: 0 10px 24px rgba(15, 21, 36, 0.1);
-  border: 1px solid rgba(15, 21, 36, 0.06);
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.65rem 0;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(16, 19, 34, 0.08);
+}
+
+.ecosystem-pill:last-of-type {
+  border-bottom: none;
+}
+
+@media (min-width: 900px) {
+  .ecosystem-pill {
+    border-bottom: none;
+  }
 }
 
 .ecosystem-pill__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2.6rem;
+  height: 2.6rem;
   border-radius: 50%;
-  background: rgba(60, 70, 255, 0.08);
-  color: rgba(60, 70, 255, 0.85);
-  font-size: 1.4rem;
+  background: rgba(60, 70, 255, 0.06);
+  color: rgba(60, 70, 255, 0.82);
+  font-size: 1.2rem;
   border: 1px solid rgba(60, 70, 255, 0.18);
 }
 
@@ -299,20 +392,20 @@ a:hover {
   color: #101322;
   display: inline-flex;
   align-items: baseline;
-  gap: 0.35rem;
+  gap: 0.3rem;
 }
 
 .ecosystem-pill__copy h3 span {
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  color: rgba(16, 19, 34, 0.58);
+  color: rgba(16, 19, 34, 0.5);
 }
 
 .ecosystem-pill__copy p {
-  margin: 0.35rem 0 0;
-  color: rgba(16, 19, 34, 0.62);
-  line-height: 1.55;
+  margin: 0.25rem 0 0;
+  color: rgba(16, 19, 34, 0.6);
+  line-height: 1.5;
 }
 
 .ecosystem-card::after {
