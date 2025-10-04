@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My GitHub Pages Site</title>
+    <meta name="description" content="A simple static website hosted on GitHub Pages." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">My GitHub Pages Site</h1>
+        <nav class="site-nav">
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="about">
+        <div class="container">
+          <h2>Welcome!</h2>
+          <p>
+            This is a lightweight HTML and CSS starter template ready to deploy on
+            GitHub Pages. Customize the content to make it your own.
+          </p>
+          <a class="button" href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">Learn about GitHub Pages</a>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="container grid">
+          <article class="card">
+            <h3>Simple Structure</h3>
+            <p>Clean file layout under the <code>assets/</code> directory for styles and media.</p>
+          </article>
+          <article class="card">
+            <h3>Responsive Design</h3>
+            <p>Starter CSS includes a mobile-friendly layout to get you going quickly.</p>
+          </article>
+          <article class="card">
+            <h3>Easy Deployment</h3>
+            <p>Push these files to a GitHub repository and enable GitHub Pages to publish.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        <p>&copy; <span id="current-year"></span> My GitHub Pages Site.</p>
+        <p>
+          Built with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML</a>
+          &amp;
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">CSS</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
