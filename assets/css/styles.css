@@ -218,6 +218,7 @@ a:hover {
 
 .legal-divider {
   color: rgba(18, 20, 29, 0.35);
+  padding: 0 0.35rem;
 }
 
 .legal-rights {
