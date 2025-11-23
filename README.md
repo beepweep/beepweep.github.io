@@ -8,7 +8,7 @@ Welcome to the digital home of **BeepWeep Ventures**. We are a venture capital f
 
 We have forged ventures and compounded wealth across diverse arenas:
 
-*   **🌐 Blockchain (2020 – ∞)**: Building the decentralized future.
+*   **🌐 Blockchain (2020 Onwards)**: Building the decentralized future.
 *   **📈 Fund Manager (2018)**: Strategies for 10x returns.
 *   **💳 Payments (2017)**: Making transactions seamless.
 *   **📊 Ad Tech (2017)**: Decoding the illusion of attention.
@@ -19,7 +19,7 @@ We have forged ventures and compounded wealth across diverse arenas:
 
 This website embodies our core philosophy: **Substance over Status**.
 
-We chose a **Neo-Brutalist** aesthetic to reflect this—raw, unpolished, and unapologetically bold.
+We chose a **Neo-Brutalist** aesthetic to reflect this: raw, unpolished, and unapologetically bold.
 *   **High Contrast**: Stark black and white with "International Orange" (#ff4d00) and "Hyper Blue" (#0055ff) accents.
 *   **Typography**: Massive, uppercase `Space Grotesk` headings that demand attention.
 *   **UI Elements**: Thick 3px borders, hard offset shadows, and tactile interactions.
@@ -45,4 +45,4 @@ We chose a **Neo-Brutalist** aesthetic to reflect this—raw, unpolished, and un
 
 ## 📄 License
 
-&copy; 2015 – 2025 BeepWeep Ventures. All rights reserved.
+&copy; 2015 to 2025 BeepWeep Ventures. All rights reserved.
