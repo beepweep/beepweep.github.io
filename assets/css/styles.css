@@ -747,11 +747,7 @@ a {
   padding: 3rem 2rem;
   border-right: 1px solid #333;
   border-bottom: 1px solid #333;
-  transition: background 0.2s ease;
-}
-
-.partner-cell:hover {
-  background: #111;
+  cursor: default;
 }
 
 .partner-cell img {
@@ -762,17 +758,8 @@ a {
   /* Make brighter and clearer */
   opacity: 0.8;
   /* Increased visibility by default */
-  transition: all 0.3s ease;
 }
 
-.partner-cell:hover img {
-  opacity: 1;
-  filter: grayscale(0%) brightness(110%);
-  /* Full color and slightly brighter on hover */
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
-  /* Subtle glow for dark bg */
-}
 
 
 
