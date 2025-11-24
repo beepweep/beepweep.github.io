@@ -3,7 +3,7 @@
   const banner = document.querySelector('.cookie-banner');
   const action = banner?.querySelector('.cookie-banner__action');
   const countdown = banner?.querySelector('.cookie-banner__countdown span');
-  
+
   if (!banner || !action) return;
 
   const storageKey = 'beepweep-cookie-ack';
@@ -49,5 +49,50 @@
     window.clearTimeout(autoTimer);
     if (countdownTimer) window.clearInterval(countdownTimer);
     acceptAndHide();
+  });
+})();
+
+// Theme Toggle Logic
+(function () {
+  const themeToggle = document.querySelector('.theme-toggle');
+  const sunIcon = document.querySelector('.theme-icon-sun');
+  const moonIcon = document.querySelector('.theme-icon-moon');
+  const storageKey = 'beepweep-theme';
+
+  // Function to set theme
+  const setTheme = (theme) => {
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    }
+    localStorage.setItem(storageKey, theme);
+  };
+
+  // Check for saved theme preference or use system preference
+  const savedTheme = localStorage.getItem(storageKey);
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else {
+    // Auto-detect based on system preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(prefersDark ? 'dark' : 'light');
+  }
+
+  // Toggle theme on button click
+  themeToggle?.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+  });
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem(storageKey)) {
+      setTheme(e.matches ? 'dark' : 'light');
+    }
   });
 })();
