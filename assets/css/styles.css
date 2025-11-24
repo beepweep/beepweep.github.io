@@ -410,6 +410,25 @@ a {
   color: #fff;
 }
 
+.hero-button--outline {
+  color: var(--color-text);
+  background: transparent;
+}
+
+[data-theme="dark"] .hero-button--outline {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 6px 6px 0px #fff;
+}
+
+[data-theme="dark"] .hero-button--outline:hover {
+  box-shadow: 9px 9px 0px #fff;
+}
+
+[data-theme="dark"] .hero-button--outline:active {
+  box-shadow: 0 0 0 #fff;
+}
+
 .hero-button:hover {
   transform: translate(-3px, -3px);
   box-shadow: 9px 9px 0px #000;
