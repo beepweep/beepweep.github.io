@@ -232,6 +232,57 @@ a {
   text-decoration: none;
 }
 
+/* Tooltip for Greetings */
+.greet[data-label] {
+  position: relative;
+}
+
+.greet[data-label]:hover::before {
+  content: attr(data-label);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 2px solid var(--color-accent);
+  box-shadow: 4px 4px 0px var(--color-accent);
+  z-index: 10;
+  pointer-events: none;
+  animation: tooltip-pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Triangle for tooltip */
+.greet[data-label]:hover::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #000 transparent;
+  z-index: 10;
+}
+
+@keyframes tooltip-pop {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
 /* Refined Footer */
 .site-footer {
   padding: 5rem 0;
