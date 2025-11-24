@@ -675,15 +675,23 @@ a {
   letter-spacing: -0.03em;
 }
 
-.founder-bio {
-  font-size: 1.15rem;
+.founder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.founder-card .founder-bio {
+  font-size: 0.95rem;
   font-weight: 500;
-  max-width: 700px;
-  margin: 0 auto 3rem;
   line-height: 1.6;
-  text-align: center;
+  text-align: left;
   color: var(--color-text);
   opacity: 0.9;
+  margin: 1.5rem 0;
+  max-width: 100%;
 }
 
 .founder-card {
@@ -835,6 +843,11 @@ a {
 
   .founder-title {
     font-size: 2rem;
+  }
+
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .founder-card {
