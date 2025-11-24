@@ -729,6 +729,16 @@ a {
   letter-spacing: -0.03em;
 }
 
+.founder-intro {
+  font-size: 1.25rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin: -1.5rem auto 3rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
 .founder-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
