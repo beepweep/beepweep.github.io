@@ -536,10 +536,15 @@ a {
 
 .ecosystems-intro {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   margin-bottom: 4rem;
   font-family: var(--font-body);
   font-weight: 500;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  opacity: 0.8;
 }
 
 .ecosystems-grid {

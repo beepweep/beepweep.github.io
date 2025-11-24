@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beepweep.github.io/sitemap.xml
