@@ -104,3 +104,34 @@
     yearSpan.textContent = new Date().getFullYear();
   }
 })();
+
+// Page Transitions
+(function () {
+  // Fade in on page load
+  document.body.classList.add('page-loaded');
+
+  // Handle link clicks for smooth transitions
+  const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"], a[href^="../"], a:not([href^="http"]):not([href^="mailto:"]):not([href^="#"]):not([target="_blank"])');
+
+  internalLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+
+      // Skip if it's just an anchor link or external
+      if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || this.getAttribute('target') === '_blank') {
+        return;
+      }
+
+      e.preventDefault();
+
+      // Fade out
+      document.body.classList.remove('page-loaded');
+      document.body.classList.add('page-transitioning');
+
+      // Navigate after animation
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300);
+    });
+  });
+})();
