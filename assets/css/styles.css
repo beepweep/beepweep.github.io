@@ -675,6 +675,17 @@ a {
   letter-spacing: -0.03em;
 }
 
+.founder-bio {
+  font-size: 1.15rem;
+  font-weight: 500;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--color-text);
+  opacity: 0.9;
+}
+
 .founder-card {
   display: inline-block;
   background: #fff;
