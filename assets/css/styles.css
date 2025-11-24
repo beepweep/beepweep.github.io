@@ -756,6 +756,11 @@ a {
   object-fit: contain;
 }
 
+[data-theme="dark"] .partner-cell img {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
 
 
 
