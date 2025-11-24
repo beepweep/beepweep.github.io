@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <rect fill="#ffffff" width="200" height="200"/>
+  <!-- Shadow -->
+  <rect x="14" y="14" width="172" height="172" fill="#000000"/>
+  <!-- Border -->
+  <rect x="10" y="10" width="172" height="172" fill="#000000" stroke="#000000" stroke-width="4"/>
+  <!-- BW Text -->
+  <text x="100" y="125" font-family="Space Grotesk, Arial, sans-serif" font-size="80" font-weight="800" text-anchor="middle" fill="#ffffff">BW</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <rect width="400" height="200" fill="#000000"/>
+  <!-- White background parallelogram -->
+  <polygon points="100,50 380,50 320,150 40,150" fill="#ffffff"/>
+  <!-- White parallelogram -->
+  <polygon points="110,60 370,60 310,140 50,140" fill="#ffffff"/>
+  <!-- BEEPWEEP text -->
+  <text x="200" y="115" font-family="Space Grotesk, Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000000" letter-spacing="2">BEEPWEEP</text>
+</svg>
