@@ -75,60 +75,87 @@
             </div>
         </section>
 
-        <section class="contact-content">
+        <section class="contact-split">
             <div class="container">
-                <div class="contact-grid-fancy">
-                    <!-- Location Cards -->
-                    <div class="contact-card location-card dubai">
-                        <div class="card-icon">🇦🇪</div>
-                        <h3>Dubai</h3>
-                        <p>Global HQ</p>
+                <div class="contact-layout">
+                    <!-- Left Column: Offices -->
+                    <div class="contact-col offices">
+                        <h2 class="section-label">Our Coordinates</h2>
+
+                        <div class="office-card">
+                            <div class="office-header">
+                                <span class="flag">🇦🇪</span>
+                                <h3>Dubai</h3>
+                            </div>
+                            <p class="office-role">Global HQ</p>
+                            <p class="office-address">
+                                DIFC Innovation Hub<br>
+                                Gate Avenue, Zone D<br>
+                                Dubai, UAE
+                            </p>
+                        </div>
+
+                        <div class="office-card">
+                            <div class="office-header">
+                                <span class="flag">🇮🇳</span>
+                                <h3>Gurgaon</h3>
+                            </div>
+                            <p class="office-role">Engineering Hub</p>
+                            <p class="office-address">
+                                DLF Cyber City<br>
+                                Building 10, Tower A<br>
+                                Gurgaon, India
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="contact-card location-card gurgaon">
-                        <div class="card-icon">🇮🇳</div>
-                        <h3>Gurgaon</h3>
-                        <p>Engineering Hub</p>
+                    <!-- Right Column: Actions -->
+                    <div class="contact-col actions">
+                        <h2 class="section-label">Initiate Protocol</h2>
+
+                        <a href="mailto:hello@beepweep.com" class="action-row email">
+                            <div class="action-content">
+                                <h3>Pitch Us</h3>
+                                <p>Send your deck. We read everything.</p>
+                            </div>
+                            <div class="action-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/beepweep/" target="_blank" rel="noopener"
+                            class="action-row linkedin">
+                            <div class="action-content">
+                                <h3>Connect</h3>
+                                <p>Follow the signal on LinkedIn.</p>
+                            </div>
+                            <div class="action-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="https://wellfound.com/company/beepweep" target="_blank" rel="noopener"
+                            class="action-row jobs">
+                            <div class="action-content">
+                                <h3>Join the Ranks</h3>
+                                <p>We are hunting for 10x engineers.</p>
+                            </div>
+                            <div class="action-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                        </a>
                     </div>
-
-                    <!-- Action Buttons -->
-                    <a href="mailto:hello@beepweep.com" class="contact-card action-card email">
-                        <div class="card-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </div>
-                        <h3>Email Us</h3>
-                        <span class="action-arrow">→</span>
-                    </a>
-
-                    <a href="https://www.linkedin.com/company/beepweep/" target="_blank" rel="noopener"
-                        class="contact-card action-card linkedin">
-                        <div class="card-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                        </div>
-                        <h3>LinkedIn</h3>
-                        <span class="action-arrow">↗</span>
-                    </a>
-
-                    <a href="https://wellfound.com/company/beepweep" target="_blank" rel="noopener"
-                        class="contact-card action-card jobs">
-                        <div class="card-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                            </svg>
-                        </div>
-                        <h3>Join Us</h3>
-                        <span class="action-arrow">↗</span>
-                    </a>
                 </div>
             </div>
         </section>

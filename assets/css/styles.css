@@ -994,3 +994,174 @@ a {
     font-size: 1.25rem;
   }
 }
+
+/* Split Layout Contact Page */
+.contact-split {
+  padding: 4rem 0 8rem;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+}
+
+.section-label {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border-bottom: 3px solid #000;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/* Office Cards */
+.office-card {
+  background: #fff;
+  border: 3px solid #000;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 6px 6px 0px #000;
+  transition: transform 0.2s ease;
+}
+
+.office-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #000;
+}
+
+.office-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.office-header .flag {
+  font-size: 2rem;
+}
+
+.office-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.office-role {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--color-accent-secondary);
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.office-address {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+/* Action Rows */
+.action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 3px solid #000;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 6px 6px 0px #000;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.action-row:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--color-accent);
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.action-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem 0;
+}
+
+.action-content p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.action-row:hover .action-content p {
+  opacity: 0.9;
+}
+
+.action-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.action-row:hover .action-icon {
+  background: var(--color-accent);
+  border-color: #fff;
+  color: #fff;
+  transform: rotate(-10deg);
+}
+
+/* Dark Mode */
+[data-theme="dark"] .section-label {
+  border-color: #fff;
+}
+
+[data-theme="dark"] .office-card,
+[data-theme="dark"] .action-row {
+  background: #1a1a1a;
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 6px 6px 0px #fff;
+}
+
+[data-theme="dark"] .office-card:hover,
+[data-theme="dark"] .action-row:hover {
+  box-shadow: 10px 10px 0px #fff;
+}
+
+[data-theme="dark"] .action-row:hover {
+  background: #fff;
+  color: #000;
+}
+
+[data-theme="dark"] .action-icon {
+  background: #1a1a1a;
+  border-color: #fff;
+  color: #fff;
+}
+
+[data-theme="dark"] .action-row:hover .action-icon {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: #000;
+}
