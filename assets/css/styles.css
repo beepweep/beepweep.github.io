@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   /* Neo-Brutalist Design Tokens */
   --color-bg: #ffffff;
@@ -641,19 +647,4 @@ a {
 
 .cookie-banner__action:hover {
   background: var(--color-accent);
-}
-
-@media (max-width: 768px) {
-  .hero-copy h1 {
-    font-size: 3.5rem;
-  }
-
-  .header-greeting {
-    display: none;
-  }
-
-  .footer-bottom-grid {
-    flex-direction: column;
-    text-align: center;
-  }
 }
