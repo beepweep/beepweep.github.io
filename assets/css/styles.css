@@ -948,13 +948,12 @@ a {
   transform: scale(1.1);
 }
 
-/* Footer Disclaimer */
 /* Footer Button Links */
 .footer-links-buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
-  margin-top: 2rem;
+  max-width: 500px;
 }
 
 .footer-button {
