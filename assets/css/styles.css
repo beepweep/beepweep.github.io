@@ -125,6 +125,11 @@ body {
   background-image: radial-gradient(#000 1px, transparent 1px);
   background-size: 24px 24px;
   /* Dot pattern */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ... (rest of file) ... */
