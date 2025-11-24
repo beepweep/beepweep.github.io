@@ -995,6 +995,31 @@ a {
   }
 }
 
+/* Contact Hero Section */
+.contact-hero {
+  padding: 6rem 0 4rem;
+  background: var(--color-bg);
+  background-image: none;
+  border-bottom: 3px solid #000;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.contact-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+  margin: 0;
+}
+
 /* Split Layout Contact Page */
 .contact-split {
   padding: 4rem 0 8rem;
@@ -1164,4 +1189,8 @@ a {
   background: var(--color-accent);
   color: #fff;
   border-color: #000;
+}
+
+[data-theme="dark"] .contact-hero {
+  border-color: #fff;
 }
