@@ -73,14 +73,13 @@
     localStorage.setItem(storageKey, theme);
   };
 
-  // Check for saved theme preference or use system preference
+  // Check for saved theme preference or default to dark
   const savedTheme = localStorage.getItem(storageKey);
   if (savedTheme) {
     setTheme(savedTheme);
   } else {
-    // Auto-detect based on system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(prefersDark ? 'dark' : 'light');
+    // Default to dark theme
+    setTheme('dark');
   }
 
   // Toggle theme on button click
