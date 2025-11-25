@@ -368,35 +368,7 @@ a {
   max-width: 100%;
 }
 
-.footer-links {
-  display: flex;
-  gap: 1rem;
-}
 
-.footer-links a {
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: 0.02em;
-  color: #000;
-  background: #fff;
-  border: 2px solid #000;
-  padding: 0.75rem 1.5rem;
-  box-shadow: 4px 4px 0px #000;
-  transition: all 0.2s ease;
-}
-
-.footer-links a:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px var(--color-accent);
-  color: #000;
-}
-
-.footer-links a:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0 0 0 #000;
-}
 
 /* Refined Hero Section */
 .hero {
@@ -1079,7 +1051,7 @@ a {
     width: 100%;
   }
 
-  .footer-links a {
+  .footer-link {
     display: block;
     text-align: center;
   }
