@@ -996,6 +996,17 @@ a {
   border-left-color: #fff;
 }
 
+[data-theme="dark"] .site-footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-top-color: #fff;
+}
+
+[data-theme="dark"] .site-footer::before {
+  background-image: radial-gradient(#fff 1px, transparent 1px);
+  opacity: 0.05;
+}
+
 
 
 
