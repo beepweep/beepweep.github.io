@@ -113,7 +113,7 @@ This is a private repository for BeepWeep Ventures. For inquiries, please contac
 
 ## 📞 Contact
 
-- **Website**: [beepweep.github.io](https://beepweep.github.io)
+- **Website**: [beepweep.com](https://beepweep.com)
 - **LinkedIn**: [BeepWeep Ventures](https://www.linkedin.com/company/beepweep/)
 - **GitHub**: [@beepweep](https://github.com/beepweep)
 
