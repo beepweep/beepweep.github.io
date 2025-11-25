@@ -921,11 +921,12 @@ a {
 }
 
 /* Footer Button Links */
+/* Footer Button Links */
 .footer-links-buttons {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  align-items: center;
   gap: 1rem;
-  max-width: 500px;
+  flex-wrap: wrap;
 }
 
 .footer-button {
@@ -934,39 +935,26 @@ a {
   justify-content: center;
   background: #fff;
   border: 3px solid #000;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   text-decoration: none;
   color: #000;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 0.05em;
   box-shadow: 4px 4px 0px #000;
   transition: all 0.2s ease;
+  height: 54px;
+}
+
+.footer-button-icon {
+  padding: 0;
+  width: 54px;
 }
 
 .footer-button:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0px #000;
-}
-
-.footer-button-full {
-  width: 100%;
-}
-
-.footer-button-split {
-  display: flex;
-  gap: 1rem;
-}
-
-.footer-button-half {
-  flex: 1;
-  padding: 2rem 1.5rem;
-}
-
-.footer-button-half svg {
-  width: 32px;
-  height: 32px;
 }
 
 [data-theme="dark"] .footer-button {
@@ -979,6 +967,7 @@ a {
 [data-theme="dark"] .footer-button:hover {
   box-shadow: 6px 6px 0px #fff;
 }
+
 
 
 [data-theme="dark"] .footer-legal {
