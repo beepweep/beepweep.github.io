@@ -18,7 +18,7 @@ We have forged ventures and compounded wealth across diverse arenas:
 ## 👥 The Architects
 
 **Madhur Satija** - CEO (Chief Execution Officer)
-*A builder who turned curiosity into ventures across blockchain, fintech, and beyond. Madhur doesn't chase trends. He architects systems that compound. From news media to Web3, his path has been deliberate: solve real problems, build with precision, scale with purpose. No fluff. Just execution.*
+*Full stack operator and generalist. A builder who turned curiosity into ventures across blockchain, fintech, and beyond. He architects systems that compound. From news media to Web3, his path has been deliberate: solve real problems, build with precision, scale with purpose. No fluff. Just execution.*
 
 **Abhishek Kaushik** - CTO (Chief Troubleshooting Officer)
 *Technical leader ensuring systems run smoothly and problems get solved.*
