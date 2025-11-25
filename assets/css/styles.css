@@ -718,22 +718,29 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem 2rem;
+  padding: 2rem;
   border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   cursor: default;
   background: #fff;
+  height: 200px;
+  /* Fixed height for uniformity */
 }
 
 .partner-cell img {
-  max-width: 140px;
-  max-height: 50px;
+  max-width: 160px;
+  max-height: 80px;
   object-fit: contain;
 }
 
 .partner-cell img.logo-large {
   max-height: 100px;
   max-width: 220px;
+}
+
+.partner-cell img.logo-medium {
+  max-height: 90px;
+  max-width: 180px;
 }
 
 
