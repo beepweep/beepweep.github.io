@@ -991,6 +991,12 @@ a {
   color: #fff;
 }
 
+[data-theme="dark"] .footer-legal {
+  color: #fff;
+  border-left-color: #fff;
+}
+
+
 
 
 @media (max-width: 768px) {
