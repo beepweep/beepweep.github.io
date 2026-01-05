@@ -259,6 +259,59 @@ a {
   text-decoration: none;
 }
 
+/* Header Actions & Login Button */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-login {
+  background: var(--color-accent-secondary);
+  color: #fff;
+  border: 2px solid #000;
+  padding: 0.85rem 2.2rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  box-shadow: 3px 3px 0px #000;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.header-login:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000;
+  background: var(--color-accent);
+}
+
+.header-login:active {
+  transform: translate(1px, 1px);
+  box-shadow: 0 0 0 #000;
+}
+
+[data-theme="dark"] .header-actions {
+  color: #fff;
+}
+
+[data-theme="dark"] .header-login {
+  border-color: #fff;
+  box-shadow: 3px 3px 0px #fff;
+}
+
+[data-theme="dark"] .header-login:hover {
+  box-shadow: 4px 4px 0px #fff;
+}
+
+[data-theme="dark"] .header-login:active {
+  box-shadow: 0 0 0 #fff;
+}
+
 /* Tooltip for Greetings */
 .greet[data-label] {
   position: relative;
@@ -1009,9 +1062,19 @@ a {
     position: relative;
   }
 
-  .theme-toggle {
+  .header-actions {
     position: absolute;
     right: 0;
+    gap: 0.75rem;
+  }
+
+  .header-login {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .theme-toggle {
+    position: static;
   }
 
   .hero {
