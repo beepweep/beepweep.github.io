@@ -8,6 +8,7 @@ Welcome to the digital home of **BeepWeep Ventures**. We are a venture capital f
 
 We have forged ventures and compounded wealth across diverse arenas:
 
+*   **🖥️ Infra + AI (2025 Onwards)**: Building the foundational systems that power tomorrow.
 *   **🌐 Blockchain (2020 Onwards)**: Building the decentralized future.
 *   **📈 Fund Manager (2018)**: Strategies for 10x returns.
 *   **💳 Payments (2017)**: Making transactions seamless.

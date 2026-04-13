@@ -599,17 +599,39 @@ a {
 /* Bento Grid Logic */
 @media (min-width: 900px) {
   .ecosystems-grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "infra infra infra blockchain blockchain blockchain"
+      "fund fund payments payments adtech adtech"
+      "travel travel travel news news news";
   }
 
-  .card-blockchain {
-    grid-column: span 2;
-    grid-row: span 2;
+  .card-infra {
+    grid-area: infra;
   }
 
   .card-fund {
-    grid-column: span 2;
+    grid-area: fund;
+  }
+
+  .card-payments {
+    grid-area: payments;
+  }
+
+  .card-adtech {
+    grid-area: adtech;
+  }
+
+  .card-travel {
+    grid-area: travel;
+  }
+
+  .card-news {
+    grid-area: news;
+  }
+
+  .card-blockchain {
+    grid-area: blockchain;
   }
 }
 
@@ -679,7 +701,10 @@ a {
   border-color: #000;
 }
 
-.card-blockchain .ecosystem-pill__icon {
+.card-spotlight {
+}
+
+.card-spotlight .ecosystem-pill__icon {
   background: var(--color-accent);
   width: 100px;
   height: 100px;
@@ -687,9 +712,9 @@ a {
   color: #fff;
 }
 
-.card-blockchain:hover .ecosystem-pill__icon {
-  background: var(--color-accent-secondary);
-  transform: scale(1.1) rotate(3deg);
+.card-spotlight:hover .ecosystem-pill__icon {
+  background: var(--color-accent);
+  transform: scale(1.1) rotate(5deg);
 }
 
 .ecosystem-pill__copy h3 {
