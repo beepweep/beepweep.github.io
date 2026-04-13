@@ -100,6 +100,7 @@ beepweep.github.io/
 
 ## 🔄 Recent Updates
 
+- Updated Ecosystems bento grid layout to be chronological and perfectly balanced
 - Dark mode implementation with smooth transitions
 - Founder section with team member cards
 - Dynamic copyright year
